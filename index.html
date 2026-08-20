@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<title>Purified</title>
+
+<link rel="manifest" href="./manifest.json" />
+<meta name="theme-color" content="#100E0B" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Purified" />
+<link rel="apple-touch-icon" href="./icons/icon-192.png" />
+<link rel="icon" href="./icons/icon-192.png" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  html, body, #root { height: 100%; margin: 0; background: #100E0B; }
+  #boot-fallback {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: #9C9282; font-family: sans-serif; font-size: 14px; text-align: center; padding: 24px;
+  }
+</style>
+</head>
+<body>
+  <div id="root">
+    <div id="boot-fallback">Loading Purified…</div>
+  </div>
+
+  <!-- Voorgecompileerde, zelfstandige bundel (React + iconen + de hele app
+       zitten er al in) — geen losse CDN-modules of in-browser JSX-vertaling
+       meer nodig, dus geen kwetsbaar punt waar het kan vastlopen. -->
+  <script src="./app.bundle.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
