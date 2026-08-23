@@ -1,11 +1,12 @@
-// v3: adds pdf.js worker (needed for in-app PDF reading) + bumps the cache
-// name again so anyone on an older cached version picks this up cleanly.
-const CACHE_NAME = "purified-v3-bundle";
+// v2: gebundelde build. Nieuwe CACHE_NAME t.o.v. v1 zorgt ervoor dat elke
+// browser die de oude (kapotte) versie ooit gecachet had, gegarandeerd
+// overschakelt naar deze nieuwe versie i.p.v. voor altijd de oude, stuk-
+// gecachete bestanden te blijven serveren.
+const CACHE_NAME = "purified-v2-bundle";
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./app.bundle.js",
-  "./pdf.worker.min.mjs",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
