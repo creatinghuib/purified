@@ -27,6 +27,7 @@ Bijgehouden per upgrade-ronde, zodat we niet kwijtraken wat al gedaan is.
 - Ingebouwde muziekbibliotheek (gospel-instrumental + piano-instrumental, rechtenvrij, streaming)
 - Meer natuurgeluiden (8 stuks, echte opnames, geen synthese)
 - **Audioboeken-sectie**: aparte "Books"/"Audiobooks"-koppen in Bibliotheek, met 2 ingebouwde publiek-domein audioboeken (LibriVox, direct mp3, geen download nodig)
+- **Gratis boeken openen nu écht in de lezer**: klikken haalt de echte tekst op (Project Gutenberg via Gutendex), parseert 'm net als EPUB/PDF, en opent 'm meteen in de lezer (notities/highlight/voorlezen werken erop). Boek wordt bewaard in een nieuwe **"Downloaded — ready to read"**-sectie zodat heropenen daarna instant gaat, zonder opnieuw te downloaden.
 
 ## ⏳ Nog te doen (uit de laatste lijst van de gebruiker)
 
