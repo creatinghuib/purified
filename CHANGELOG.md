@@ -34,6 +34,8 @@ Bijgehouden per upgrade-ronde, zodat we niet kwijtraken wat al gedaan is.
 - **Audioboeken hebben nu een eigen "Listen"-tabblad** (was voorheen alleen een sectie ín Bibliotheek — nu een volwaardig apart tabblad met eigen icoon). Bevestigd: 2 echte publiek-domein audioboeken (LibriVox) staan erin en spelen af.
 - **Meeleestekst ("read-along") bij audioboeken**: bij de 2 ingebouwde titels kun je nu de bijbehorende, echte boektekst tonen terwijl je luistert. Eerlijkheidshalve: dit is **niet woord-voor-woord gesynchroniseerd** met het geluid (dat zou echte spraakherkenning vereisen — een veel groter apart project, zie punt #14/15 hieronder) — het is de echte, volledige tekst om in je eigen tempo mee te volgen.
 - **Europese radiospeler** (#20): in het Muziek-tabblad, 5 landen met échte, live directe streams van publieke omroepen — 🇬🇧 Classic FM, 🇫🇷 France Inter, 🇩🇪 Deutschlandfunk, 🇧🇪 VRT Klara, 🇳🇱 NPO Radio 2. Getest: correcte stream-URL per land, wisselt goed tussen stations. Eerlijkheidshalve: sommige stations leveren zelf alleen http (niet https) — dat ligt aan de bron, niet aan de app; browser kan een melding tonen maar zou het geluid alsnog moeten afspelen.
+- **Notities-scherm herzien** (#18): nu écht gescheiden secties "Notes" en "Highlights" (i.p.v. één platte lijst), elk met eigen aantal en lege-staat-melding — zelfde patroon als de Bibliotheek.
+- **Nieuw: woordenboek-functie** (op eigen verzoek toegevoegd aan de lijst): selecteer een woord in de lezer → tik het boek-icoontje in het zwevende menu → toont definitie + uitspraak, via de gratis, meertalige dictionaryapi.dev (geen sleutel nodig). Zoekt automatisch in de taal die de app-interface op dat moment heeft staan, met terugval naar Engels als dat woord er niet in staat. Getest met gesimuleerde API-respons: werkt correct end-to-end.
 
 ## ⏳ Nog te doen (uit de laatste lijst van de gebruiker)
 
@@ -46,6 +48,7 @@ Bijgehouden per upgrade-ronde, zodat we niet kwijtraken wat al gedaan is.
 20. Europese radiospeler met diverse landen — nog niet gedaan
 21. Boeken automatisch vertalen per boek naar elke Europese taal — nog niet gedaan (vereist vertaal-API)
 22. Boeken aanbieden in elke taal — nog niet gedaan
+23. Woordenboek-taaldekking verifiëren voor alle 8 talen (en/nl/de/fr/es/it/pt/pl) — de gebruikte API ondersteunt bevestigd Engels/Frans/Duits/Spaans/Italiaans/Portugees; Nederlands en Pools nog niet met zekerheid bevestigd, valt dan terug op Engels
 
 ## ❌ Kan niet (technische/platformgrenzen)
 
