@@ -36,6 +36,8 @@ Bijgehouden per upgrade-ronde, zodat we niet kwijtraken wat al gedaan is.
 - **Europese radiospeler** (#20): in het Muziek-tabblad, 5 landen met échte, live directe streams van publieke omroepen — 🇬🇧 Classic FM, 🇫🇷 France Inter, 🇩🇪 Deutschlandfunk, 🇧🇪 VRT Klara, 🇳🇱 NPO Radio 2. Getest: correcte stream-URL per land, wisselt goed tussen stations. Eerlijkheidshalve: sommige stations leveren zelf alleen http (niet https) — dat ligt aan de bron, niet aan de app; browser kan een melding tonen maar zou het geluid alsnog moeten afspelen.
 - **Notities-scherm herzien** (#18): nu écht gescheiden secties "Notes" en "Highlights" (i.p.v. één platte lijst), elk met eigen aantal en lege-staat-melding — zelfde patroon als de Bibliotheek.
 - **Nieuw: woordenboek-functie** (op eigen verzoek toegevoegd aan de lijst): selecteer een woord in de lezer → tik het boek-icoontje in het zwevende menu → toont definitie + uitspraak, via de gratis, meertalige dictionaryapi.dev (geen sleutel nodig). Zoekt automatisch in de taal die de app-interface op dat moment heeft staan, met terugval naar Engels als dat woord er niet in staat. Getest met gesimuleerde API-respons: werkt correct end-to-end.
+- **#21/22 Boeken vertalen naar elke Europese taal**: in Leesopties → "Translate this book", kies een van de 8 talen. Gebruikt de gratis MyMemory-vertaal-API (geen sleutel, CORS-vriendelijk). Werkt op zowel de ingebouwde voorbeeldtekst als elk geopend boek; wissel je terug naar Engels dan verschijnt gewoon weer de originele tekst (geen opnieuw vertalen nodig). Getest met gesimuleerde API-respons: vertalen en terugschakelen werken beide correct.
+  - **Eerlijke beperking**: de gratis MyMemory-laag staat zo'n 5.000 tekens per dag per bezoeker toe (ca. een hoofdstuk of twee) — geen onbeperkt hele boeken per dag. Bij het bereiken van die grens verschijnt een duidelijke melding i.p.v. een stille mislukking.
 
 ## ⏳ Nog te doen (uit de laatste lijst van de gebruiker)
 
@@ -46,8 +48,8 @@ Bijgehouden per upgrade-ronde, zodat we niet kwijtraken wat al gedaan is.
 18. Aparte notities-toolbar/zijbalk across de hele app (nu: alleen gescheiden headers in Bibliotheek gedaan, notities-tab zelf nog niet herzien)
 19. ~~Gratis muziekbibliotheek~~ deels gedaan (2 tracks) — meer genres/tracks kan nog
 20. Europese radiospeler met diverse landen — nog niet gedaan
-21. Boeken automatisch vertalen per boek naar elke Europese taal — nog niet gedaan (vereist vertaal-API)
-22. Boeken aanbieden in elke taal — nog niet gedaan
+~~21. Boeken automatisch vertalen per boek naar elke Europese taal~~ ✅ gedaan
+~~22. Boeken aanbieden in elke taal~~ ✅ gedaan (via de vertaalfunctie hierboven — elk boek kan nu naar elke taal, i.p.v. een vaste vertaling per boek)
 23. Woordenboek-taaldekking verifiëren voor alle 8 talen (en/nl/de/fr/es/it/pt/pl) — de gebruikte API ondersteunt bevestigd Engels/Frans/Duits/Spaans/Italiaans/Portugees; Nederlands en Pools nog niet met zekerheid bevestigd, valt dan terug op Engels
 
 ## ❌ Kan niet (technische/platformgrenzen)
